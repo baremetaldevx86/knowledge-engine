@@ -1,10 +1,10 @@
-# $ KNOWLEDGE ENGINE 🧠
+# KNOWLEDGE ENGINE
 
 > **Upload your brain. Ask questions. Understand everything.**
 
 A high-performance **Personal Knowledge Management (PKM)** system powered by **RAG (Retrieval-Augmented Generation)**. Turn your static PDFs and notes into a queryable, interactive, and visual knowledge base.
 
-![App Screenshot](public/screenshot.png)
+### Website Link: https://knowledge-engine-zeta.vercel.app/
 
 ## ✨ key Features
 
@@ -77,6 +77,3 @@ cd frontend
 npm install
 npm run dev
 ```
-
-## 📄 License
-MIT
