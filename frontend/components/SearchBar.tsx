@@ -24,7 +24,8 @@ export default function SearchBar() {
         setIsLoading(true);
         setHasSearched(true);
         try {
-            const res = await fetch(`http://localhost:8000/api/v1/search/?q=${encodeURIComponent(query)}&limit=5`);
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+            const res = await fetch(`${apiUrl}/api/v1/search/?q=${encodeURIComponent(query)}&limit=5`);
             const data = await res.json();
             setResults(data);
         } catch (error) {

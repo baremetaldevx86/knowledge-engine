@@ -6,7 +6,7 @@ import SearchBar from "@/components/SearchBar";
 import ChatInterface from "@/components/ChatInterface";
 import KnowledgeGraph from "@/components/KnowledgeGraph";
 import StudyMode from "@/components/StudyMode";
-import { Upload, Search, MessageSquare, Share2, Brain } from "lucide-react";
+import { Upload, Search, MessageSquare, Share2, Brain, Github, Linkedin, Mail } from "lucide-react";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<"upload" | "search" | "chat" | "graph" | "study">("upload");
@@ -110,6 +110,19 @@ export default function Home() {
           </div>
 
         </div>
+
+        {/* Footer */}
+        <footer className="flex items-center justify-center gap-8 py-8 border-t border-white/10 text-zinc-500">
+          <a href="https://github.com/baremetaldevx86" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:scale-110 transition-all duration-300">
+            <Github className="w-6 h-6" />
+          </a>
+          <a href="https://www.linkedin.com/in/vedant-chauhan-3826332b4/" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:scale-110 transition-all duration-300">
+            <Linkedin className="w-6 h-6" />
+          </a>
+          <a href="mailto:chauhanvedant007@gmail.com" className="hover:text-primary hover:scale-110 transition-all duration-300">
+            <Mail className="w-6 h-6" />
+          </a>
+        </footer>
 
       </div>
     </main>

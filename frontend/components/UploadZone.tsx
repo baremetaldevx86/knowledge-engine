@@ -46,7 +46,8 @@ export default function UploadZone() {
                 const formData = new FormData();
                 formData.append("file", file);
 
-                await fetch("http://localhost:8000/api/v1/notes/upload/", {
+                const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+                await fetch(`${apiUrl}/api/v1/notes/upload/`, {
                     method: "POST",
                     body: formData,
                 });

@@ -18,7 +18,8 @@ export default function KnowledgeGraph() {
         // Determine color based on system preference (simple check)
         // For now assume light mode or dark mode handling in graph config
 
-        fetch("http://localhost:8000/api/v1/graph/")
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+        fetch(`${apiUrl}/api/v1/graph/`)
             .then((res) => res.json())
             .then((graphData) => {
                 // Transform backend data to format expected by react-force-graph

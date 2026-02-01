@@ -25,7 +25,8 @@ export default function StudyMode() {
     // Load notes on mount
     const loadNotes = async () => {
         try {
-            const res = await fetch("http://localhost:8000/api/v1/notes/");
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+            const res = await fetch(`${apiUrl}/api/v1/notes/`);
             const data = await res.json();
             setNotes(data);
             if (data.length > 0 && !noteId) setNoteId(data[0].id);
@@ -40,7 +41,8 @@ export default function StudyMode() {
         setIsFlipped(false);
 
         try {
-            const res = await fetch("http://localhost:8000/api/v1/study/flashcards", {
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+            const res = await fetch(`${apiUrl}/api/v1/study/flashcards`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ note_id: noteId, amount: 5 })
