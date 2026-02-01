@@ -6,16 +6,16 @@ A high-performance **Personal Knowledge Management (PKM)** system powered by **R
 
 ### Website Link: https://knowledge-engine-zeta.vercel.app/
 
-## ✨ key Features
+## key Features
 
-*   **⚡ Fast Batch Uploads**: Drag & drop multiple PDFs/Text files. Processed instantly using parallel batch embeddings.
-*   **🧠 Neural Chat**: Ask questions about your documents ("What is string theory?"). The AI understands context and favors your **most recent uploads** for relevance.
-*   **🔍 Semantic Search**: Find concepts, not just keywords. Uses `pgvector` for deep semantic understanding.
-*   **🕸️ Knowledge Graph**: Visualize connections between your notes in a 3D-force graph.
-*   **🎓 Study Mode**: Automatically generate **Flashcards** from your notes to master new topics.
-*   **💾 Persistent Dashboard**: Switch seamlessly between Upload, Search, Chat, and Graph views without losing context.
+*   **Fast Batch Uploads**: Drag & drop multiple PDFs/Text files. Processed instantly using parallel batch embeddings.
+*   **Neural Chat**: Ask questions about your documents ("What is string theory?"). The AI understands context and favors your **most recent uploads** for relevance.
+*   **Semantic Search**: Find concepts, not just keywords. Uses `pgvector` for deep semantic understanding.
+*   **Knowledge Graph**: Visualize connections between your notes in a 3D-force graph.
+*   **Study Mode**: Automatically generate **Flashcards** from your notes to master new topics.
+*   **Persistent Dashboard**: Switch seamlessly between Upload, Search, Chat, and Graph views without losing context.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Core
 *   **Language**: Python 3.11+, TypeScript
@@ -36,7 +36,7 @@ A high-performance **Personal Knowledge Management (PKM)** system powered by **R
 *   **Icons**: Lucide React
 *   **State**: React Hooks (State Persistence)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 *   Docker & Docker Compose
