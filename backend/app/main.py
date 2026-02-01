@@ -16,7 +16,7 @@ app = FastAPI(title="Personal Knowledge System API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"], # Allow Vercel deployment
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
