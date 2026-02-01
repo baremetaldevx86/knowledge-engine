@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlmodel
+asyncpg
+pgvector
+python-dotenv
+pydantic-settings
+alembic
+psycopg2-binary # for alembic migrations mostly
+pypdf # for parsing validation later
+sentence-transformers # for embeddings
+openai # optionally
+replicate # optionally
