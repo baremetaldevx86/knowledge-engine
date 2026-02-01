@@ -11,3 +11,4 @@ pypdf # for parsing validation later
 sentence-transformers # for embeddings
 openai # optionally
 replicate # optionally
+python-multipart # for file uploads

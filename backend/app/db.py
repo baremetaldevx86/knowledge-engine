@@ -15,6 +15,23 @@ if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
 elif DATABASE_URL and DATABASE_URL.startswith("postgresql://") and "asyncpg" not in DATABASE_URL:
     DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+asyncpg://", 1)
 
+# Fix for "sslmode" and "channel_binding" (asyncpg does not handle these in URL params)
+# Detailed check to keep the URL valid
+if "?" in DATABASE_URL:
+   # Split query args
+   base_url, query_args = DATABASE_URL.split("?", 1)
+   # Filter out incompatible args
+   valid_args = []
+   for arg in query_args.split("&"):
+       if not arg.startswith("sslmode=") and not arg.startswith("channel_binding="):
+           valid_args.append(arg)
+   
+   # Reconstruct
+   if valid_args:
+       DATABASE_URL = f"{base_url}?{'&'.join(valid_args)}"
+   else:
+       DATABASE_URL = base_url
+
 engine = create_async_engine(DATABASE_URL, echo=True, future=True)
 
 async def init_db():
