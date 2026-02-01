@@ -133,14 +133,14 @@ export default function StudyMode() {
             )}
 
             {cards.length > 0 && (
-                <div className="flex items-center gap-8 text-black">
-                    <button onClick={prevCard} className="p-4 bg-black/10 hover:bg-black/20 rounded-full transition-colors">
+                <div className="flex items-center gap-8 text-white">
+                    <button onClick={prevCard} className="p-4 bg-white/10 hover:bg-white/20 rounded-full transition-colors">
                         <ChevronLeft className="w-6 h-6" />
                     </button>
                     <span className="text-lg font-black tracking-widest">
                         {currentIndex + 1} / {cards.length}
                     </span>
-                    <button onClick={nextCard} className="p-4 bg-black/10 hover:bg-black/20 rounded-full transition-colors">
+                    <button onClick={nextCard} className="p-4 bg-white/10 hover:bg-white/20 rounded-full transition-colors">
                         <ChevronRight className="w-6 h-6" />
                     </button>
                 </div>
